@@ -67,16 +67,23 @@ func printInReverseOrderHelper(node *Node) {
 
 func main() {
     ll := &LinkedList{}
+    ll.addNode(54)
     ll.addNode(1)
     ll.addNode(2)
     ll.addNode(3)
     ll.addNode(4)
 	ll.printInReverseOrder()
     ll.display()
-
     ll.removeNode(3)
     ll.display()
 
     ll.removeNode(1)
     ll.display()
+    h:=1
+    k:=future(&h)
+    fmt.Println(k)
+}
+func future(i *int)int{
+    *i=5
+    return *i
 }

@@ -48,7 +48,7 @@ func (ht *HashTable) Put(key string, value interface{}) {
         }
         head = head.Next
     }
-    newNode := &Node{key, value, ht.data[index]}
+    newNode := &Node{Key: key, Value: value, Next: ht.data[index]}
     ht.data[index] = newNode
 }
 
@@ -75,5 +75,5 @@ func main(){
 	ht.Put("a",1)
 	ht.Put("b",3)
 	h,_:=ht.Get("a")
-	fmt.Println(h)
-	}
+	fmt.Println(h)	
+}
